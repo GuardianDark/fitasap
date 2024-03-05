@@ -123,7 +123,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         PageViewModel(
           title: "Another title page",
           body: "Another beautiful body text for this example onboarding",
-          image: _buildImage('img2.jpg'),
+          image: _buildImage('_0030.png'),
           footer: ElevatedButton(
             onPressed: () {
               introKey.currentState?.animateScroll(0);
@@ -161,7 +161,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
             bodyAlignment: Alignment.bottomCenter,
             imageAlignment: Alignment.topCenter,
           ),
-          image: _buildImage('img1.jpg'),
+          image: _buildImage('_0036.png'),
           reverse: true,
         ),
       ],
@@ -190,7 +190,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         ),
       ),
       dotsContainerDecorator: const ShapeDecoration(
-        color: Colors.black87,
+        color: Colors.white10,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
