@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle, color: Color(0xff00cc79)),
                     height: 70,
                     width: 70,
-                    child: Image.asset('assets/images/Avatar.png'),
+                    child: Image.asset('assets/images/g.png'),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle, color: Color(0xff00cc79)),
                     height: 70,
                     width: 70,
-                    child: Image.asset('assets/images/Avatar.png'),
+                    child: Image.asset('assets/images/g.png'),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle, color: Color(0xff00cc79)),
                     height: 70,
                     width: 70,
-                    child: Image.asset('assets/images/Avatar.png'),
+                    child: Image.asset('assets/images/g.png'),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle, color: Color(0xff00cc79)),
                     height: 70,
                     width: 70,
-                    child: Image.asset('assets/images/Avatar.png'),
+                    child: Image.asset('assets/images/g.png'),
                   ),
                 ],
               ),
