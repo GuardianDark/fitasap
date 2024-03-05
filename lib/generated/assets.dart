@@ -28,11 +28,8 @@ class Assets {
   static const String images1 = 'assets/images/1.png';
   static const String imagesAvatar = 'assets/images/Avatar.png';
   static const String imagesFace5 = 'assets/images/face5.png';
-  static const String imagesG = 'assets/images/g.png';
-  static const String imagesGt = 'assets/images/Gt.png';
   static const String imagesVectorPatternThree = 'assets/images/VectorPatternThree.png';
   static const String imagesVectorPatternTwo = 'assets/images/VectorPatternTwo.png';
   static const String imagesVectorpattern = 'assets/images/Vectorpattern.png';
-  static const String imagesWl = 'assets/images/wl.json';
 
 }
