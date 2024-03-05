@@ -8,6 +8,18 @@ class Note extends StatefulWidget {
 }
 
 class _NoteState extends State<Note> {
+  List<Map<String, dynamic>> map = [
+    {
+      "title": "قرص ها",
+      "color": "red",
+      "text": "قرص ها رو بخور"
+    },
+    {
+      "title": "قرص ها",
+      "color": "green",
+      "text": "قرص ها رو بخور"
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,42 +51,85 @@ class _NoteState extends State<Note> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            width: 300,
-            height: 110,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Color(0xffEDECF4)),
-                color: Colors.white),
-            child: Column(
-              children: [
-                Stack(
-                  children: [Padding(
-                    padding: const EdgeInsets.only(right: 20, top: 15),
-                    child: Align(alignment: Alignment.topRight, child: Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red
-                      ),
-                    )),
-                  ),
-                    Align(alignment: Alignment.bottomRight,child: Padding(
-                      padding: const EdgeInsets.only(right: 47, top: 10),
-                      child: Text("دریافت کس مادرت", style: TextStyle(
-                        fontFamily: 'Vazir',
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600
-                      ),),
-                    ))
-                  ]
-                ),
-              ],
-            ),
-          ),
+          Expanded(
+            child: ListView.builder(itemBuilder: (context, index) {
+              return mapList(index);
+            }, itemCount: map.length,),
+          )
         ],
       ),
     );
+  }
+
+  Widget mapList(int index){
+    Color? colorX = Colors.red!;
+    String title = map[index]['title'];
+    String color = map[index]['color'];
+    String text = map[index]['text'];
+    switch (color) {
+      case 'red':
+        colorX = Colors.red;
+      case 'green':
+        colorX = Colors.green;
+      case 'blue':
+        colorX = Colors.blue;
+      case 'purple':
+        colorX = Colors.purple;
+      case 'pink':
+        colorX = Colors.pink;
+      default:
+        colorX = Colors.orange;
+    }
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 300,
+        height: 110,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            border: Border.all(color: Color(0xffb4b4b4)),
+            color: Colors.white),
+        child: Column(
+          children: [
+            Stack(children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20, top: 15),
+                child: Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 10,
+                      height: 10,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: colorX),
+                    )),
+              ),
+              Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 47, top: 10),
+                    child: Text(
+                      "$title",
+                      style: TextStyle(
+                          fontFamily: 'Vazir',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ))
+            ]),
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text("$text",
+                      style: TextStyle(
+                          fontFamily: 'Vazir',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600))),
+            )
+          ],
+        ),
+      ),
+    );
+
   }
 }

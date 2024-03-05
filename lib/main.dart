@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: MyHomePage(),
-      initialRoute: '/Chat',
+      initialRoute: '/Note',
       routes: {
         '/welcome'   :  (context) => PageOne(),
         '/profile'   :  (context) => Profile(),
