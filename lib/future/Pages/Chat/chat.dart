@@ -25,20 +25,22 @@ class _BasicState extends State<ChatUserX> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basic example'),
+        title: const Text('Basic examp1`e'),
       ),
-      body: DashChat(
-        currentUser: ChatUser(
-          id: '2',
-          firstName: 'X',
-          lastName: 'q',
+      body: Container(
+        child: DashChat(
+          currentUser: ChatUser(
+            id: '2',
+            firstName: 'X',
+            lastName: 'q',
+          ),
+          onSend: (ChatMessage m) {
+            setState(() {
+              messages.insert(0, m);
+            });
+          },
+          messages: messages,
         ),
-        onSend: (ChatMessage m) {
-          setState(() {
-            messages.insert(0, m);
-          });
-        },
-        messages: messages,
       ),
     );
   }

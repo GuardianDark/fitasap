@@ -6,6 +6,7 @@ class Assets {
   static const String fontsInterMedium = 'assets/fonts/InterMedium.ttf';
   static const String fontsInterRegular = 'assets/fonts/InterRegular.ttf';
   static const String fontsInterSemiBold = 'assets/fonts/InterSemiBold.ttf';
+  static const String fontsIphone = 'assets/fonts/iphone.ttf';
   static const String fontsPoppinsBold = 'assets/fonts/PoppinsBold.ttf';
   static const String fontsPoppinsMedium = 'assets/fonts/PoppinsMedium.ttf';
   static const String fontsPoppinsRegular = 'assets/fonts/PoppinsRegular.ttf';
@@ -24,12 +25,28 @@ class Assets {
   static const String images0010 = 'assets/images/_0010.png';
   static const String images0028 = 'assets/images/_0028.png';
   static const String images0030 = 'assets/images/_0030.png';
+  static const String images0031 = 'assets/images/_0031.png';
+  static const String images0032 = 'assets/images/_0032.png';
   static const String images0036 = 'assets/images/_0036.png';
+  static const String images0039 = 'assets/images/_0039.png';
   static const String images1 = 'assets/images/1.png';
+  static const String imagesAlx = 'assets/images/alx.png';
+  static const String imagesAmu = 'assets/images/amu.png';
+  static const String imagesApple = 'assets/images/apple.png';
   static const String imagesAvatar = 'assets/images/Avatar.png';
+  static const String imagesAvatarpoint = 'assets/images/avatarpoint.png';
+  static const String imagesAvatarshop = 'assets/images/avatarshop.png';
+  static const String imagesBack = 'assets/images/back.png';
+  static const String imagesCoins = 'assets/images/coins.webp';
   static const String imagesFace5 = 'assets/images/face5.png';
+  static const String imagesFrame = 'assets/images/Frame.png';
+  static const String imagesLoard = 'assets/images/loard.png';
+  static const String imagesOnarrow = 'assets/images/onarrow.png';
+  static const String imagesSafebox = 'assets/images/safebox.png';
+  static const String imagesTooth = 'assets/images/tooth.png';
   static const String imagesVectorPatternThree = 'assets/images/VectorPatternThree.png';
   static const String imagesVectorPatternTwo = 'assets/images/VectorPatternTwo.png';
+  static const String imagesVectorback = 'assets/images/vectorback.png';
   static const String imagesVectorpattern = 'assets/images/Vectorpattern.png';
 
 }

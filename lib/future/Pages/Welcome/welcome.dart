@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
+import '../Home/Home.dart';
+
 void main() => runApp(const WelcomePage());
 
 class WelcomePage extends StatelessWidget {
@@ -58,7 +60,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
     const bodyStyle = TextStyle(fontSize: 19.0);
 
     const pageDecoration = PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
+      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700, fontFamily: 'Vazir'),
       bodyTextStyle: bodyStyle,
       bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
@@ -69,76 +71,56 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       key: introKey,
       globalBackgroundColor: Colors.white,
       allowImplicitScrolling: true,
-      autoScrollDuration: 3000,
+      autoScrollDuration: 8000,
       infiniteAutoScroll: true,
       globalHeader: Align(
         alignment: Alignment.topRight,
       ),
-      globalFooter: SizedBox(
-        width: double.infinity,
-        height: 60,
-        child: ElevatedButton(
-          child: const Text(
-            'بزن بریم!',
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+      globalFooter: Column(
+        children: [
+          SizedBox(
+            width: MediaQuery.sizeOf(context).width - 20,
+            height: 70,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color(0xff45F08A))
+              ),
+              child: const Text(
+                'بزن بریم!',
+                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Vazir'),
+              ),
+              onPressed: () => _onIntroEnd(context),
+            ),
           ),
-          onPressed: () => _onIntroEnd(context),
-        ),
+          SizedBox(height: 10,)
+        ],
       ),
       pages: [
         PageViewModel(
-          title: "Fractional shares",
+          title: "فیت آسا",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+              "فیت آسا یک اپلیکیشن جامع و کاربردیه که به تو برای بهتر و سالم تر زندگی کردن کمک میکنه",
           image: _buildImage('_0010.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Learn as you go",
+          title: "همراه همیشگی",
           body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
+              "فیت آسا یک مربی هوشمند و به روزه که همیشه و همه جا همراهته!",
           image: _buildImage('_0028.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Kids and teens",
+          title: "دقیق و فنی",
           body:
-              "Kids and teens can track their stocks 24/7 and place trades that you approve.",
+              "فیت آسا با جزئیات زندگیت یک تحلیل خوب و دقیق راجع به عادت های روز مره ات بهت میده.",
           image: _buildImage('_0030.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Full Screen Page",
-          body:
-              "Pages can be full screen as well.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id euismod lectus, non tempor felis. Nam rutrum rhoncus est ac venenatis.",
-          image: _buildFullscreenImage(),
-          decoration: pageDecoration.copyWith(
-            contentMargin: const EdgeInsets.symmetric(horizontal: 16),
-            fullScreen: true,
-            bodyFlex: 2,
-            imageFlex: 3,
-            safeArea: 100,
-          ),
-        ),
-        PageViewModel(
-          title: "Another title page",
-          body: "Another beautiful body text for this example onboarding",
-          image: _buildImage('_0030.png'),
-          footer: ElevatedButton(
-            onPressed: () {
-              introKey.currentState?.animateScroll(0);
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.lightBlue,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-            ),
-            child: const Text(
-              'FooButton',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+          title: "لبه فناوری",
+          body: "فیت آسا روی لبه تکنولوژی حرکت میکنه و از فناوری های روز برای خدمت رسانی به شما استفاده میکنه",
+          image: _buildImage('_0031.png'),
           decoration: pageDecoration.copyWith(
             bodyFlex: 6,
             imageFlex: 6,
@@ -146,13 +128,12 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           ),
         ),
         PageViewModel(
-          title: "Title of last page - reversed",
+          title: "بزن بریم!",
+
           bodyWidget: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
+              Text("وقتشه تورو بیشتر بشناسیم!", style: bodyStyle),
             ],
           ),
           decoration: pageDecoration.copyWith(
@@ -161,7 +142,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
             bodyAlignment: Alignment.bottomCenter,
             imageAlignment: Alignment.topCenter,
           ),
-          image: _buildImage('_0036.png'),
+          image: _buildImage('_0032.png'),
           reverse: true,
         ),
       ],
@@ -173,9 +154,9 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       showBackButton: false,
       //rtl: true, // Display as right-to-left
       back: const Icon(Icons.arrow_back),
-      skip: const Text('Skip', style: TextStyle(fontWeight: FontWeight.w600)),
+      skip: const Text('بعدی', style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'Vazir')),
       next: const Icon(Icons.arrow_forward),
-      done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+      done: const Text('تمام', style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'Vazir')),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),
       controlsPadding: kIsWeb
@@ -199,8 +180,8 @@ class OnBoardingPageState extends State<OnBoardingPage> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class YouPage extends StatelessWidget {
+  const YouPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

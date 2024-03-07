@@ -1,11 +1,13 @@
+import 'package:fitasanew/future/Pages/Quiz/Quiz.dart';
+import 'package:fitasanew/future/Pages/Shop/shop.dart';
+import 'package:fitasanew/future/Pages/Sign-Up/sign.dart';
+import 'package:fitasanew/future/Pages/breath/breath.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fitasanew/future/Pages/Chat/chat.dart';
 import 'package:fitasanew/future/Pages/Home/Home.dart';
 import 'package:fitasanew/future/Pages/Note/note.dart';
 import 'package:fitasanew/future/Pages/Register/PageOne.dart';
-import 'package:fitasanew/future/Pages/Register/PageThree.dart';
-import 'package:fitasanew/future/Pages/Register/PageTwo.dart';
 
 import 'future/Pages/Welcome/welcome.dart';
 import 'future/Pages/profile/profile.dart';
@@ -35,16 +37,18 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: MyHomePage(),
-      initialRoute: '/welcome',
+      initialRoute: '/profile',
       routes: {
         '/welcome'   :  (context) => WelcomePage(),
         '/profile'   :  (context) => Profile(),
         '/PageOne'   :  (context) => PageOne(),
-        '/PageTwo'   :  (context) => PageTwo(),
-        '/PageThree' :  (context) => PageThree(),
-        '/HomePage'  :  (context) => PageOne(),
+        '/HomePage'  :  (context) => HomePage(),
         '/Chat'      :  (context) => ChatUserX(),
-        '/Note'      :  (context) => Note()
+        '/Note'      :  (context) => Note(),
+        '/SignUp'    :  (context) => SignUp(),
+        '/Shop'      :  (context) => ShopPage(),
+        '/breath'    :  (context) => Breath(),
+        '/Quiz'      :  (context) => Quiz(),
       },
     );
   }
